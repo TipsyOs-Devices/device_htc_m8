@@ -44,6 +44,16 @@ TARGET_OTA_ASSERT_DEVICE := htc_m8,htc_m8whl,htc_m8wl,m8,m8wl,m8wlv,m8vzw,m8whl,
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 
+# Rom Toolchain 
+TARGET_GCC_VERSION_EXP := 4.9 
+ 
+# Custom Toolchain Flags 
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin 
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-  
+ 
+# Tesla Optimizations 
+PULSE := true 
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m8/bluetooth
 
